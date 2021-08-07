@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #d5e2e7;
+}
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+}
+.searchTerm {
+  width: 600px;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #2e595f;
+}
+.searchTerm:focus {
+  color: #05262b;
+}
+.searchButton {
+  width: 100px;
+  height: 35px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchButton:hover {
+  background: #097988;
+}
+a {
+  text-decoration: none;
+}
+.cards-field {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  width: 440px;
+  margin-bottom: 69px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.card:hover {
+  transition: all linear 0.3s;
+  box-shadow: 5px 5px 5px 2px rgba(34, 60, 80, 0.6);
+}
+.card-pic {
+  margin-bottom: 22px;
+}
+.card-title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000;
+  position: relative;
+  margin-bottom: 21px;
+}
+.card-title::after {
+  content: '';
+  position: absolute;
+  background: red;
+  left: 0;
+  bottom: -10px;
+  width: 300px;
+  height: 2px;
+  border-radius: 0px;
+  transition: all linear 0.3s;
+}
+.card:hover .card-title::after {
+  width: 435px;
+}
+.card-desc {
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.card-desc-small {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  padding-bottom: 5px;
+}

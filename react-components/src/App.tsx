@@ -1,9 +1,12 @@
 import React from 'react';
+import { Searchbar } from '../components/Searchbar';
+import { CardsField } from '../components/CardsField';
 
 export const App = () => {
   return (
-    <>
-      <h1>Wooohooooo!</h1>
-    </>
+    <div className="wrap">
+      <Searchbar />
+      <CardsField />
+    </div>
   );
 };

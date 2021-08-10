@@ -1,6 +1,7 @@
 import React from 'react';
 import '../src/style.css';
+import { Form } from '../components/Form';
 
 export const App = () => {
-  return <h1>ggggggg</h1>;
+  return <Form />;
 };

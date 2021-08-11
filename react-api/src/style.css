@@ -10,3 +10,21 @@ html {
   margin: 0;
   padding: 0;
 }
+
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.form-search-group {
+  display: flex;
+  justify-content: center;
+}
+
+.form-input {
+  width: 500px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+}

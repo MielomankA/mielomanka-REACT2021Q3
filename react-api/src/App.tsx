@@ -1,6 +1,7 @@
 import React from 'react';
-import '../src/style.css';
+import './style.css';
+import { MainPage } from './pages/MainPage';
 
 export const App = () => {
-  return <h1>Hello</h1>;
+  return <MainPage />;
 };

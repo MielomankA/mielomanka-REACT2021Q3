@@ -1,17 +1,26 @@
+import { AxiosResponse } from 'axios';
 import React, { ChangeEvent, useState } from 'react';
 import axios from '../services/api';
+import { Article, GET200Articles } from '../types';
+import { Articles } from '../../components/Articles';
+
+const API_KEY = '8c4af3f5923644749daf7fb16b4ea169';
 
 export const MainPage: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [arts, setArts] = useState<Article[]>([]);
 
   const hundleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.get(`v2/everything?q=${searchValue}&apiKey=${process.env.API_KEY}`);
+      const response: AxiosResponse<GET200Articles> = await axios.get(
+        `v2/everything?q=${searchValue}&apiKey=${API_KEY}`,
+      );
+      setArts(response.data.articles);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
     } finally {
       setIsLoading(false);
     }
@@ -38,6 +47,7 @@ export const MainPage: React.FC = () => {
           {isLoading ? 'Loading...' : 'Search'}
         </button>
       </form>
+      <Articles articles={arts} />
     </div>
   );
 };

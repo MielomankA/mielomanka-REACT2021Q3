@@ -11,15 +11,25 @@ html {
   padding: 0;
 }
 
+body {
+  background: rgb(157, 63, 251);
+  background: radial-gradient(circle, rgba(157, 63, 251, 1) 0%, rgba(252, 238, 70, 1) 100%);
+}
+
 .page-wrap {
   max-width: 1440px;
   margin: 0 auto;
   padding-top: 50px;
 }
 
+.wrap-form {
+  margin-bottom: 20px;
+}
+
 .form-search-group {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .form-input {
@@ -27,4 +37,98 @@ html {
   height: 35px;
   border-radius: 5px;
   font-size: 20px;
+  margin-right: 5px;
+}
+
+.form-button {
+  height: 35px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+  cursor: pointer;
+  background: rgb(123, 63, 251);
+  background: linear-gradient(90deg, rgba(123, 63, 251, 1) 0%, rgba(252, 174, 70, 1) 100%);
+  color: white;
+}
+
+.form-button:hover {
+  background: rgb(157, 63, 251);
+  background: linear-gradient(90deg, rgba(157, 63, 251, 1) 0%, rgba(252, 238, 70, 1) 100%);
+}
+
+.form-search-group > input {
+  margin-right: 100px;
+}
+
+.form-radio {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-radio label {
+  margin-right: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.field-wrap {
+  padding-bottom: 50px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em 50px;
+  justify-items: center;
+}
+
+.article-title {
+  font-size: larger;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.article-date {
+  padding-bottom: 10px;
+}
+
+.img-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.article-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.article-desc {
+  padding-bottom: 30px;
+}
+
+.list-link {
+  width: 118px;
+  padding: 12px 19px;
+  background: rgb(123, 63, 251);
+  background: linear-gradient(90deg, rgba(123, 63, 251, 1) 0%, rgba(252, 174, 70, 1) 100%);
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  border-radius: 5px;
+}
+
+.list-button {
+  padding-bottom: 50px;
+}
+
+.list-link:hover {
+  background: rgb(157, 63, 251);
+  background: linear-gradient(90deg, rgba(157, 63, 251, 1) 0%, rgba(252, 238, 70, 1) 100%);
 }

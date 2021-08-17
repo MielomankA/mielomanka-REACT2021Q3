@@ -11,13 +11,14 @@ export const MainPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [arts, setArts] = useState<Article[]>([]);
   const [sortBy, setSortBy] = useState<SortType>(SortType.popularity);
+  const [page, setPage] = useState<number>(1);
 
   const hundleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     try {
       const response: AxiosResponse<GET200Articles> = await axios.get(
-        `v2/everything?q=${searchValue}&apiKey=${API_KEY}&sortBy=${sortBy}`,
+        `v2/everything?q=${searchValue}&apiKey=${API_KEY}&sortBy=${sortBy}&pageSize=10&page=${page}`,
       );
       setArts(response.data.articles);
     } catch (err) {
@@ -79,7 +80,7 @@ export const MainPage: React.FC = () => {
           publishedAt
         </label>
       </div>
-      <Articles articles={arts} />
+      <Articles articles={arts} page={page} onChangePage={(pageFromInput: number) => setPage(pageFromInput)} />
     </div>
   );
 };

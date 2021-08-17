@@ -105,7 +105,7 @@ li {
 .article-img {
   width: 400px;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   margin: 0 auto;
 }
 
@@ -131,4 +131,12 @@ li {
 .list-link:hover {
   background: rgb(157, 63, 251);
   background: linear-gradient(90deg, rgba(157, 63, 251, 1) 0%, rgba(252, 238, 70, 1) 100%);
+}
+
+.page {
+  background: transparent;
+  border: none;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
 }

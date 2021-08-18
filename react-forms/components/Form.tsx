@@ -1,47 +1,30 @@
 import '../src/style.css';
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { FirstName } from './FirstName';
+import { LastName } from './LastName';
+import { BirthDate } from './BirthDate';
+import { SelectCountry } from './SelectCountry';
+import { CheckboxAgree } from './CheckboxAgree';
+import { SubmitButton } from './SubmitButton';
 
-interface formData {
-  firstName?: string;
-  lastName?: string;
-}
-
-/* interface IForm {
-  setFormData: (state: formData[]) => void;
-} */
-
-export const Form: React.FC<formData> = ({ /* setFormValue */ }) => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-
+export const Form: React.FC = (
+  {
+    /* setFormValue */
+  },
+) => {
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    console.log(firstName);
+    console.log();
   };
 
   return (
     <form className="submitForm" onSubmit={handleSubmit}>
-      {/* <lable className="submitItem" htmlFor="search">
-        Name:
-        <input
-          type="text"
-          name="firstName"
-          value={firstName}
-          onChange={(event: ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value)}
-        />
-      </lable>
-      <lable className="submitItem" htmlFor="lastName">
-        Surname:
-        <input
-          type="text"
-          name="lastName"
-          value={lastName}
-          onChange={(event: ChangeEvent<HTMLInputElement>) => setLastName(event.target.value)}
-        />
-      </lable>
-      <div className="submitButton">
-        <input type="submit" value="Send" />
-      </div> */}
+      <FirstName />
+      <LastName />
+      <BirthDate />
+      <SelectCountry />
+      <CheckboxAgree />
+      <SubmitButton />
     </form>
   );
 };

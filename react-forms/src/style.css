@@ -10,3 +10,89 @@ html {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: linear-gradient(45deg, rgb(206, 190, 229), rgb(185, 210, 219), rgb(242, 235, 221));
+  height: 100vh;
+}
+
+.submitFormWrap {
+  width: 400px;
+  height: 450px;
+  border: 3px solid rgba(117, 147, 171, 0.6);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 0;
+}
+
+label {
+  font-size: large;
+  font-size: 20px;
+}
+
+span {
+  display: block;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 25px;
+  width: 100%;
+}
+
+.agree {
+  display: block;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input[type='checkbox'] {
+  margin-left: 10px;
+  width: 10%;
+}
+
+.submitButton {
+  margin-top: 25px;
+}
+
+input[type='submit'] {
+  background-color: #9bbeca;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  color: #fff;
+  font-size: larger;
+}
+
+input[type='submit']:hover {
+  background-color: #b6b0d9;
+}
+
+.cardField {
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto 0;
+}
+
+.card {
+  width: 350px;
+  height: 130px;
+  background-color: #ede9dd;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  margin-right: 10px;
+  margin-top: 15px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: larger;
+}

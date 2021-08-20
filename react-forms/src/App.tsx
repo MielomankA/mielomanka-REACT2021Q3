@@ -9,9 +9,11 @@ export const App: React.FC = () => {
     <div className="App">
       <Form setFormValue={setFormValue} />
       <main>
-        {formValue.map((item, idx: number) => {
-          return <Card item={item} key={idx} />;
-        })}
+        <div className="cardField">
+          {formValue.map((item, idx: number) => {
+            return <Card item={item} key={idx} />;
+          })}
+        </div>
       </main>
     </div>
   );

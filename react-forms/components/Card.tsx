@@ -8,8 +8,10 @@ export interface CardProps {
 export const Card: React.FC<CardProps> = ({ item }) => {
   return (
     <div className="card">
-      <span>{item.firstName}</span>
-      <span>{item.lastName}</span>
+      <span>Name: {item.firstName}</span>
+      <span>Surname: {item.lastName}</span>
+      <span>Birth date: {item.birthDate}</span>
+      <span>Country: {item.country}</span>
     </div>
   );
 };

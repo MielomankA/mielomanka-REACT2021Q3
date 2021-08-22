@@ -12,6 +12,7 @@ export const Card: React.FC<CardProps> = ({ item }) => {
       <span>Surname: {item.lastName}</span>
       <span>Birth date: {item.birthDate}</span>
       <span>Country: {item.country}</span>
+      <span>Sex: {item.toggleButton}</span>
     </div>
   );
 };

@@ -205,3 +205,13 @@ a {
   font-size: 30px;
   font-weight: bold;
 }
+
+.post__wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

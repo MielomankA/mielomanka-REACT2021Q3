@@ -18,5 +18,5 @@
     "forceConsistentCasingInFileNames": true
   },
   "files": ["src/index.tsx"],
-  "include": ["src/pages"]
+  "include": ["src/**/*", "./components/**/*"]
 }

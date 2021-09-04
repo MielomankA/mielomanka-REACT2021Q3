@@ -1,10 +1,11 @@
 import React from 'react';
 import './style.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { MainPage } from './pages/MainPage';
 import { Header } from '../components/Header';
 import { ErrorPage } from './pages/ErrorPage';
 import { AboutPage } from './pages/AboutPage';
+import { Details } from './pages/DetailsPage';
 
 export const App: React.FC = () => {
   return (
@@ -14,10 +15,13 @@ export const App: React.FC = () => {
         <Route exact path="/">
           <MainPage />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <AboutPage />
         </Route>
-        <Route path="*">
+        <Route exact path="/details/*">
+          <Details />
+        </Route>
+        <Route exact path="*">
           <ErrorPage />
         </Route>
       </Switch>

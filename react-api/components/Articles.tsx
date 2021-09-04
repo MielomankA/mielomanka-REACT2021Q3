@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
 import React, { ChangeEvent, useEffect, useState } from 'react';
+/* import { useLocation } from 'react-router-dom'; */
 import { Article } from '../src/types';
+import titleParser from '../src/shared/titleParser';
 
 interface ArticleProps {
   articles: Article[];
@@ -36,7 +39,21 @@ export const Articles: React.FC<ArticleProps> = ({ articles, page, onChangePage 
             {articles.map(({ author, title, description, publishedAt, urlToImage, url }, index: number) => {
               return (
                 <li key={index}>
-                  <p className="article-title">{title}</p>
+                  <Link
+                    to={{
+                      pathname: `/details/${titleParser(title)}`,
+                      state: {
+                        author,
+                        title,
+                        description,
+                        publishedAt,
+                        urlToImage,
+                      },
+                    }}
+                    key={index}
+                  >
+                    <p className="article-title">{title}</p>
+                  </Link>
                   <p>{author}</p>
                   <p className="article-date">{publishedAt}</p>
                   <div className="img-wrap">

@@ -215,3 +215,25 @@ a {
   justify-content: center;
   flex-direction: column;
 }
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  z-index: 1;
+  position: absolute;
+}
+
+.fade-enter.fade-enter-activ {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 250ms ease-in;
+}
+
+.fade-exit {
+  opacity: 0.5;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: all 250ms ease-in;
+}
